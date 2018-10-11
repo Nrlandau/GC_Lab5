@@ -16,15 +16,24 @@ namespace Lab5
         {
             //vars
             long end_Number = 0,start_Number = 0;
-            //input
-            System.Console.WriteLine("Input a number from 0 to ?");
-            start_Number = int.Parse(System.Console.ReadLine());
-            //magic
-            end_Number = Factorial(start_Number);
-            //output
-            System.Console.WriteLine(end_Number);
+            bool isNotEnd = true;
             
-            
+            while(isNotEnd)
+            {
+                //input
+                System.Console.WriteLine("Input a number from 0 to 20");
+                start_Number = int.Parse(System.Console.ReadLine());
+                //magic
+                end_Number = Factorial(start_Number);
+                //output
+                System.Console.WriteLine(end_Number);
+                //repeat?
+                System.Console.WriteLine("Continue(y/?)");
+                if(System.Console.ReadLine().ToLower() == "y")
+                    {;}
+                else
+                    isNotEnd = false;
+            }
         }
     }
 }
